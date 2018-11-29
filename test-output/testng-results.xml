@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="16713" started-at="2018-11-23T23:07:43Z" finished-at="2018-11-23T23:07:59Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="16713" started-at="2018-11-23T23:07:43Z" finished-at="2018-11-23T23:07:59Z">
+      <class name="com.powersys.alquilaAutomation.tests.CreateAdTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.powersys.alquilaAutomation.tests.CreateAdTest@77cd7a0]" name="setUp" is-config="true" duration-ms="7401" started-at="2018-11-23T20:07:43Z" finished-at="2018-11-23T20:07:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="initProperty()[pri:0, instance:com.powersys.alquilaAutomation.tests.CreateAdTest@77cd7a0]" name="initProperty" is-config="true" duration-ms="2" started-at="2018-11-23T20:07:50Z" finished-at="2018-11-23T20:07:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initProperty -->
+        <test-method status="PASS" signature="creatAdtest()[pri:0, instance:com.powersys.alquilaAutomation.tests.CreateAdTest@77cd7a0]" name="creatAdtest" duration-ms="9228" started-at="2018-11-23T20:07:50Z" finished-at="2018-11-23T20:07:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- creatAdtest -->
+      </class> <!-- com.powersys.alquilaAutomation.tests.CreateAdTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
