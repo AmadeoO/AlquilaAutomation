@@ -11,15 +11,15 @@ import org.openqa.selenium.support.FindBy;
  */
 public class HomePage extends BasePage {
 	
-	@FindBy(xpath="/html//div[@id='navbar']//a[@href='/property/add']")
-	private WebElement crearAnuncio;
+	@FindBy(id="crear_anuncio")
+	private WebElement createAd;
 
 	public HomePage(WebDriver driver) {
 		super(driver);
 		}
 	
-	public void crearAnuncio() {
-		this.crearAnuncio.click();
+	public void createAd() {
+		this.createAd.click();
 	}
 
 }
