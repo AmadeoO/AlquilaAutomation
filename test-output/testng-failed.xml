@@ -6,7 +6,6 @@
       <class name="com.powersys.alquilaAutomation.tests.CreateAdTest">
         <methods>
           <include name="creatAdtest"/>
-          <include name="tearDown"/>
           <include name="initProperty"/>
           <include name="setUp"/>
         </methods>

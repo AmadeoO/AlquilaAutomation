@@ -11,7 +11,7 @@ import org.openqa.selenium.support.FindBy;
  */
 public class HomePage extends BasePage {
 	
-	@FindBy(id="crear_anuncio")
+	@FindBy(xpath="/html//a[@name='btnC']/div[@class='btn_container']/span[@class='btn_crear']")
 	private WebElement createAd;
 
 	public HomePage(WebDriver driver) {

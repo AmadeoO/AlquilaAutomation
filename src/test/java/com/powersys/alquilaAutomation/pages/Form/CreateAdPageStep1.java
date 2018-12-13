@@ -1,10 +1,11 @@
-package com.powersys.alquilaAutomation.pages;
+package com.powersys.alquilaAutomation.pages.Form;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import com.powersys.alquilaAutomation.DTOs.PropertyDTO;
+import com.powersys.alquilaAutomation.pages.BasePage;
 
 /**
  * @author Amadeo F. Garcia
@@ -43,9 +44,11 @@ public class CreateAdPageStep1 extends BasePage {
 	@FindBy(id="diretext")
 	private WebElement aOther;
 	
-	//Next
+	//BUTTONS
 	@FindBy(id="nextBtn")
 	private WebElement nextButton;
+	@FindBy(xpath="/html//button[@id='cancelar']")
+	private WebElement cancelButton;
 	
 	
 	public CreateAdPageStep1(WebDriver driver, PropertyDTO property) {
@@ -86,9 +89,18 @@ public class CreateAdPageStep1 extends BasePage {
 		}
 	}
 	public void enterOther() {
-		if(!this.property.getOther().equals(null)) {
+		if(this.property.getOther()!=null) {
 			this.aOther.sendKeys(this.property.getOther());
 		}
+	}
+	
+		
+	public void nextPage() {
+		this.nextButton.click();
+	}
+	
+	public void cancelPage() {
+		this.cancelButton.click();
 	}
 	
 	

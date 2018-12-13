@@ -1,6 +1,7 @@
 package com.powersys.alquilaAutomation.DTOs;
 
 import java.util.HashMap;
+import java.util.List;
 
 
 
@@ -23,23 +24,66 @@ public class PropertyDTO {
 	private boolean guarantor;
 	private boolean clerkship;//ESCRIBANÍA
 	private boolean contract;
-	private Integer contractExpenses;
-	private Integer initialDeposit;
-	private String additionalInformation;
+	private boolean contratExpenses;
+	private boolean initialDeposit;
+	private Integer amountContractExpenses;
+	private Integer amountInitialDeposit;
+	private String aditionalInformation;
 	private String environments;
 	private boolean toilet;
 	private boolean garage;
 	private boolean balcony;
 	private boolean playground;//PATIO
-	private String other2;
-	private HashMap<Integer, String> imgs;
+	private String moreInformation;
+	private HashMap<Integer,String> imgs;
 
 	
 	public PropertyDTO() {
 		super();
+		this.imgs = new HashMap<Integer, String>();
+	}
+	
+	public void setImgs(Integer key, String value) {
+		this.imgs.put(key, value);
+	}
+	
+	public String getImgs(Integer key) {
+		return this.imgs.get(key);
+	}
+	
+	public boolean isInitialDeposit() {
+		return initialDeposit;
 	}
 
-	
+
+
+	public void setInitialDeposit(boolean initialDeposit) {
+		this.initialDeposit = initialDeposit;
+	}
+
+	public boolean isContratExpenses() {
+		return contratExpenses;
+	}
+
+
+
+	public void setContratExpenses(boolean contratExpenses) {
+		this.contratExpenses = contratExpenses;
+	}
+
+
+
+	public String getAditionalInformation() {
+		return aditionalInformation;
+	}
+
+
+
+	public void setAditionalInformation(String aditionalInformation) {
+		this.aditionalInformation = aditionalInformation;
+	}
+
+
 
 	public Integer getAmountExpenses() {
 		return amountExpenses;
@@ -185,42 +229,28 @@ public class PropertyDTO {
 
 
 
-	public Integer getContractExpenses() {
-		return contractExpenses;
+	public Integer getAmountContractExpenses() {
+		return amountContractExpenses;
 	}
 
 
 
-	public void setContractExpenses(Integer contractExpenses) {
-		this.contractExpenses = contractExpenses;
+	public void setAmountContractExpenses(Integer amountContractExpenses) {
+		this.amountContractExpenses = amountContractExpenses;
 	}
 
 
 
-	public Integer getInitialDeposit() {
-		return initialDeposit;
+	public Integer getAmountInitialDeposit() {
+		return amountInitialDeposit;
 	}
 
 
 
-	public void setInitialDeposit(Integer initialDeposit) {
-		this.initialDeposit = initialDeposit;
+	public void setAmountInitialDeposit(Integer amountInitialDeposit) {
+		this.amountInitialDeposit = amountInitialDeposit;
 	}
-
-
-
-	public String getAdditionalInformation() {
-		return additionalInformation;
-	}
-
-
-
-	public void setAdditionalInformation(String additionalInformation) {
-		this.additionalInformation = additionalInformation;
-	}
-
-
-
+	
 	public String getEnvironments() {
 		return environments;
 	}
@@ -280,41 +310,22 @@ public class PropertyDTO {
 	}
 
 
-
-	public String getOther2() {
-		return other2;
-	}
-
-
-
-	public void setOther2(String other2) {
-		this.other2 = other2;
-	}
-
-
-
-	public HashMap<Integer, String> getImgs() {
-		return imgs;
-	}
-
-
-
-	public void setImgs(HashMap<Integer, String> imgs) {
-		this.imgs = imgs;
-	}
-
-
-
-	public String  getImgs(Integer number) {
-		return this.imgs.get(number);
-	}
 	
-	public void setImgs(Integer imgNumber, String imgURL) {
-		this.imgs.put(imgNumber, imgURL);
+	public String getMoreInformation() {
+		return moreInformation;
 	}
+
+
+
+	public void setMoreInformation(String moreInformation) {
+		this.moreInformation = moreInformation;
+	}
+
+
 	
 	
 	
+
 	
 	
 
