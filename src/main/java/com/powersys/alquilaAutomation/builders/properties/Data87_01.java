@@ -6,8 +6,6 @@ package com.powersys.alquilaAutomation.builders.properties;
  * email{amadeo.fgarcia@gmail.com}
  */
 public class Data87_01 extends PropertyBuilder{
-	
-	
 
 	@Override
 	public void buildProperty() {
@@ -32,8 +30,5 @@ public class Data87_01 extends PropertyBuilder{
 		property.setImgs(4, "C:\\Users\\Public\\Documents\\4.jpg");
 		property.setImgs(5, "C:\\Users\\Public\\Documents\\5.jpg");
 
-		
-	
-		
 	}	
 }

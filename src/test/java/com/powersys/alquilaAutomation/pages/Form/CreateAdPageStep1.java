@@ -29,7 +29,7 @@ public class CreateAdPageStep1 extends BasePage {
 	private WebElement rWithOutExpenses;
 	@FindBy(xpath="//div[@id='alquilercontainer']/div//label[2]")
 	private WebElement rWithExpenses;
-	@FindBy(id="expenses")
+	@FindBy(xpath="/html//input[@id='expensas']")
 	private WebElement rAmountExpenses;
 	
 	//ADDRESS

@@ -18,16 +18,20 @@ import com.powersys.alquilaAutomation.pages.BasePage;
 public class CreateAdPageStep2 extends BasePage {
 	private PropertyDTO property;
 	
+	//Title
+	@FindBy(xpath="//div[@id='legal']/h5[.='INFORMACIÓN LEGAL']")
+	private WebElement text;
+	
 	//LEGAL INFORMATION
-	@FindBy(xpath="/html//input[@id='gsi']")
+	@FindBy(xpath="//div[@id='legal']/div[@class='container-table100']//table[@class='table1']/tbody/tr[1]/td[@class='column100 column2']/label")
 	private WebElement guarantor;
-	@FindBy(xpath="/html//input[@id='esi']")
+	@FindBy(xpath="//div[@id='legal']/div[@class='container-table100']//table[@class='table1']/tbody/tr[2]/td[@class='column100 column2']/label")
 	private WebElement clerkship;
-	@FindBy(xpath="/html//input[@id='csi']")
+	@FindBy(xpath="//div[@id='legal']/div[@class='container-table100']//table[@class='table1']/tbody/tr[3]/td[@class='column100 column2']/label")
 	private WebElement contract;
-	@FindBy(xpath="/html//input[@id='gcsi']")
+	@FindBy(xpath="//div[@id='legal']/div[@class='container-table100']//table[@class='table1']/tbody/tr[4]/td[@class='column100 column2']/label")
 	private WebElement contractExpenses;
-	@FindBy(xpath="/html//input[@id='dsi']")
+	@FindBy(xpath="//div[@id='legal']/div[@class='container-table100']//table[@class='table1']/tbody/tr[5]/td[@class='column100 column2']/label")
 	private WebElement initalDeposit;
 	@FindBy(xpath="/html//input[@id='gastosc']")
 	private WebElement amountContractExpenses;
@@ -51,13 +55,13 @@ public class CreateAdPageStep2 extends BasePage {
 	@FindBy(xpath="//div[@id='detalles']/div[1]/div/label[3]/span[@class='title']")
 	private WebElement fourOrMore;
 	//---------------------
-	@FindBy(xpath="/html//input[@id='bsi']")
+	@FindBy(xpath="//div[@id='table2']//table[@class='table2']/tbody/tr[1]/td[@class='column100 column2']/label")
 	private WebElement toilet;
-	@FindBy(xpath="/html//input[@id='grsi']")
+	@FindBy(xpath="//div[@id='table2']//table[@class='table2']/tbody/tr[2]/td[@class='column100 column2']/label")
 	private WebElement garage;
-	@FindBy(xpath="/html//input[@id='lsi']")
+	@FindBy(xpath="//div[@id='table2']//table[@class='table2']/tbody/tr[3]/td[@class='column100 column2']/label")
 	private WebElement balcony;
-	@FindBy(xpath="/html//input[@id='psi']")
+	@FindBy(xpath="//div[@id='table2']//table[@class='table2']/tbody/tr[4]/td[@class='column100 column2']/label")
 	private WebElement playground;
 	@FindBy(xpath="/html//textarea[@id='descripcion']")
 	private WebElement aditionalInformation;
@@ -118,6 +122,7 @@ public class CreateAdPageStep2 extends BasePage {
 	
 	public void enterMoreInformation() {
 		if(this.property.getMoreInformation()!=null) {
+			this.moreInformation.clear();
 			this.moreInformation.sendKeys(this.property.getMoreInformation());
 		}
 	}
@@ -165,9 +170,14 @@ public class CreateAdPageStep2 extends BasePage {
 	public void enterAditionalInformation() {
 		
 		if(this.property.getAditionalInformation()!=null) {
-				this.moreInformation.sendKeys(this.property.getAditionalInformation());
+			this.aditionalInformation.clear();
+			this.aditionalInformation.sendKeys(this.property.getAditionalInformation());
 		}
 		
+	}
+	
+	public String getTitle() {
+		return this.text.getText();
 	}
 	
 	public void backPage() {
