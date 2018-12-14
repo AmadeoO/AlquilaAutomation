@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.powersys.alquilaAutomation.tests.CreatAdTest87_03a">
+      <class name="com.powersys.alquilaAutomation.tests.CreateAdTest87_02">
         <methods>
-          <include name="creatAdtest87_03a"/>
+          <include name="creatAdtest87_02"/>
           <include name="setUp"/>
           <include name="initProperty"/>
         </methods>
-      </class> <!-- com.powersys.alquilaAutomation.tests.CreatAdTest87_03a -->
+      </class> <!-- com.powersys.alquilaAutomation.tests.CreateAdTest87_02 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

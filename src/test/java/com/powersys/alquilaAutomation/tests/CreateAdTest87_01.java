@@ -1,6 +1,6 @@
 package com.powersys.alquilaAutomation.tests;
 
-import java.util.concurrent.TimeUnit;
+
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -27,7 +27,6 @@ public class CreateAdTest87_01 extends BaseTest {
 	@Test
 	public void creatAdtest87_01() {
 		driver.get("http://localhost:9002/");
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		HomePage homePage = new HomePage(driver);
 		homePage.createAd();
 		CreateAdPageStep1 step1 = new CreateAdPageStep1(driver, propertyDirector.getProperty());

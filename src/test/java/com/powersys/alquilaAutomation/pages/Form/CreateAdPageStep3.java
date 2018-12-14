@@ -3,6 +3,7 @@ package com.powersys.alquilaAutomation.pages.Form;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.powersys.alquilaAutomation.DTOs.PropertyDTO;
 import com.powersys.alquilaAutomation.pages.BasePage;
@@ -36,6 +37,7 @@ public class CreateAdPageStep3 extends BasePage {
 	public CreateAdPageStep3(WebDriver driver, PropertyDTO property) {
 		super(driver);
 		this.property = property;
+		super.wait.until(ExpectedConditions.visibilityOf(nextButton));
 
 	}
 	

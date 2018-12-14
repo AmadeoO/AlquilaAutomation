@@ -3,6 +3,7 @@ package com.powersys.alquilaAutomation.pages.Form;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.powersys.alquilaAutomation.DTOs.PropertyDTO;
 import com.powersys.alquilaAutomation.pages.BasePage;
@@ -15,6 +16,9 @@ import com.powersys.alquilaAutomation.pages.BasePage;
 public class CreateAdPageStep1 extends BasePage {
 	
 	private PropertyDTO property;
+	
+	//WAIT
+	private WebElement wait;
 	
 	//TYPE
 	@FindBy(xpath="//div[@id='btns']/label[.='DEPARTAMENTO']")
@@ -54,6 +58,7 @@ public class CreateAdPageStep1 extends BasePage {
 	public CreateAdPageStep1(WebDriver driver, PropertyDTO property) {
 		super(driver);
 		this.property=property;
+		super.wait.until(ExpectedConditions.visibilityOf(nextButton));
 	}
 	
 	public void enterType() {

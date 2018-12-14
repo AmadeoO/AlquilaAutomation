@@ -6,6 +6,7 @@ package com.powersys.alquilaAutomation.pages.Form;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.powersys.alquilaAutomation.DTOs.PropertyDTO;
 import com.powersys.alquilaAutomation.pages.BasePage;
@@ -75,17 +76,10 @@ public class CreateAdPageStep2 extends BasePage {
 	private WebElement cancelButton;
 	
 	
-	
-	
-	
-	public CreateAdPageStep2(WebDriver driver) {
-		super(driver);
-		
-	}
-
 	public CreateAdPageStep2(WebDriver driver, PropertyDTO property2) {
 		super(driver);
 		this.property=property2;
+		super.wait.until(ExpectedConditions.visibilityOf(nextButton));
 	}
 
 	public void enterGuarantor() {
