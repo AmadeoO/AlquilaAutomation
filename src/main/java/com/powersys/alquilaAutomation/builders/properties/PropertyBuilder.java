@@ -9,7 +9,7 @@ import com.powersys.alquilaAutomation.DTOs.PropertyDTO;
  */
 public abstract class PropertyBuilder {
 	
-	protected PropertyDTO property;
+	protected PropertyDTO property = new PropertyDTO();
 	
 	public PropertyDTO getProperty() {
 		return property;
